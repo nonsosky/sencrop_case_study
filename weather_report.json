@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "LatLon",
+        "query": "Lat 6.51 and Lon 3.62",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Ikorodu",
+        "country": "Nigeria",
+        "region": "Lagos",
+        "lat": "6.617",
+        "lon": "3.517",
+        "timezone_id": "Africa/Lagos",
+        "localtime": "2024-12-07 07:08",
+        "localtime_epoch": 1733555280,
+        "utc_offset": "1.0"
+    },
+    "current": {
+        "observation_time": "06:08 AM",
+        "temperature": 25,
+        "weather_code": 113,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png"
+        ],
+        "weather_descriptions": [
+            "Sunny"
+        ],
+        "wind_speed": 5,
+        "wind_degree": 43,
+        "wind_dir": "NE",
+        "pressure": 1011,
+        "precip": 0,
+        "humidity": 89,
+        "cloudcover": 0,
+        "feelslike": 27,
+        "uv_index": 0,
+        "visibility": 7,
+        "is_day": "yes"
+    }
+}
