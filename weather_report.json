@@ -12,13 +12,13 @@
         "lat": "6.617",
         "lon": "3.517",
         "timezone_id": "Africa/Lagos",
-        "localtime": "2024-12-07 07:08",
-        "localtime_epoch": 1733555280,
+        "localtime": "2024-12-07 15:33",
+        "localtime_epoch": 1733585580,
         "utc_offset": "1.0"
     },
     "current": {
-        "observation_time": "06:08 AM",
-        "temperature": 25,
+        "observation_time": "02:33 PM",
+        "temperature": 35,
         "weather_code": 113,
         "weather_icons": [
             "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png"
@@ -26,16 +26,16 @@
         "weather_descriptions": [
             "Sunny"
         ],
-        "wind_speed": 5,
-        "wind_degree": 43,
-        "wind_dir": "NE",
-        "pressure": 1011,
+        "wind_speed": 16,
+        "wind_degree": 175,
+        "wind_dir": "S",
+        "pressure": 1009,
         "precip": 0,
-        "humidity": 89,
+        "humidity": 42,
         "cloudcover": 0,
-        "feelslike": 27,
-        "uv_index": 0,
-        "visibility": 7,
+        "feelslike": 41,
+        "uv_index": 5,
+        "visibility": 8,
         "is_day": "yes"
     }
 }
