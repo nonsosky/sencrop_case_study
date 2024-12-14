@@ -1,2 +1,2 @@
 ,Unique_id,location_id,weatherDec_id,localtime,localtime_epoch,utc_offset,observation_time,temperature,wind_speed,wind_degree,wind_dir,pressure,precip,humidity,cloudcover,feelslike,uv_index,visibility,is_day
-0,1,1,1,2024-12-07 15:33:00,1733585580,1.0,02:33 PM,35,16,175,S,1009,0,42,0,41,5,8,yes
+0,1,1,1,2024-12-14 06:42:00,1734158520,1.0,05:42 AM,25,10,41,NE,1010,0,100,25,28,0,6,no
