@@ -100,13 +100,13 @@ try:
     location = data_df[['location_name', 'country', 'region', 'latitude', 'longititude', 'timezone_id']].copy().reset_index(drop=True)
     location['location_id'] = range(1, len(location) + 1)
     location = location[['location_id','location_name', 'country', 'region', 'latitude', 'longititude','timezone_id']]
-    #log_message("Extracted and saved 'location' table data")
+    log_message("Extracted and saved 'location' table data")
 
     #WeatherDescription Table
     weatherDec = data_df[['weather_code', 'weather_icons', 'weather_descriptions']].copy().reset_index(drop=True)
     weatherDec['weatherDec_id'] = range(1, len(weatherDec) + 1)
     weatherDec = weatherDec[['weatherDec_id','weather_code', 'weather_icons', 'weather_descriptions']]
-    #log_message("Extracted and saved 'weatherDec' table data")
+    log_message("Extracted and saved 'weatherDec' table data")
 
     # Weather fact table
     weather_fact_table = data_df.merge(location, on=['location_name', 'country', 'region', 'latitude', 'longititude','timezone_id'], how='left') \
@@ -114,7 +114,7 @@ try:
                             [['location_id','weatherDec_id','localtime','localtime_epoch','utc_offset','observation_time','temperature','wind_speed','wind_degree','wind_dir','pressure', 'precip', 'humidity', 'cloudcover', 'feelslike', 'uv_index','visibility', 'is_day']].copy().reset_index(drop=True)
     weather_fact_table['Unique_id'] = range(1, len(weather_fact_table) + 1)
     weather_fact_table = weather_fact_table[['Unique_id','location_id','weatherDec_id','localtime','localtime_epoch','utc_offset','observation_time','temperature','wind_speed','wind_degree','wind_dir','pressure', 'precip', 'humidity', 'cloudcover', 'feelslike', 'uv_index','visibility', 'is_day']]
-    #log_message("Extracted and saved 'weather fact table' table data")
+    log_message("Extracted and saved 'weather fact table' table data")
 
 
     # Loading to CSV
@@ -123,19 +123,20 @@ try:
     weather_fact_table.to_csv('weather_fact_table.csv')
 
     # Develop a function to get the Database connection
+    # Develop a function to get the Database connection
     def get_db_connection():
         connection = psycopg2.connect(
-            host = 'localhost',
-            database = 'sencrop',
-            user = 'postgres',
-            port = '5432',
-            password = 'Nonsosky@1'
+            host = os.getenv("HOST"),
+            database = os.getenv("DATABASE"),
+            user = os.getenv("USER"),
+            port = os.getenv("PORT"),
+            password = os.getenv("PASSWORD")
         )
         return connection
 
     #connect to our database
     conn = get_db_connection()
-    #log_message("Database connected successfully")
+    log_message("Database connected successfully")
 
 
     # Create a function that setups the schema and tables
